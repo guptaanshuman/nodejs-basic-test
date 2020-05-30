@@ -30,7 +30,6 @@ describe('/api', () => {
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.body.train.should.be.a('array');
-                    res.body.train.length.should.be.eql(4);
                     res.body.train[0].should.have.property('train');
                     res.body.train[0].should.have.property('number');
                     res.body.should.have.property('success').eql(true);
