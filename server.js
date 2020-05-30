@@ -14,20 +14,17 @@ app.get('/api', (req, res) => {
     });
 });
 
-app.get('/api/books', (req, res) => {
+app.get('/api/train', (req, res) => {
     res.status(200).send({
-        books: [{
-            title: "Herry Potter",
-            author: "JK"
+        train: [{
+            train: "Purushottam Express",
+            number: "12448"
         }, {
-            title: "Book1",
-            author: "JJ"
+            train: "Prayag Raj",
+            number: "12417"
         },{
-            title: "Book2",
-            author: "JJ2"
-        },{
-            title: "DOCKER WITH KUBERNETES",
-            author: "SHIVRAJ"
+            train: "Reewa Express",
+            number: "12428"
         }],
         success: true
     });

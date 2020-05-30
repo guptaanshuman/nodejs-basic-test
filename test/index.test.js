@@ -22,17 +22,17 @@ describe('/api', () => {
             });
         });
     });
-    describe('/books', () => {
+    describe('/train', () => {
         describe('/GET', () => {
-            it('should return book list', (done) => {
+            it('should return train list', (done) => {
                 chai.request(app)
-                .get('/api/books')
+                .get('/api/train')
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.books.should.be.a('array');
-                    res.body.books.length.should.be.eql(4);
-                    res.body.books[0].should.have.property('title');
-                    res.body.books[0].should.have.property('author');
+                    res.body.train.should.be.a('array');
+                    res.body.train.length.should.be.eql(4);
+                    res.body.train[0].should.have.property('train');
+                    res.body.train[0].should.have.property('number');
                     res.body.should.have.property('success').eql(true);
 
                     done();
