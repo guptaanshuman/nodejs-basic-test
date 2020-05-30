@@ -25,6 +25,9 @@ app.get('/api/books', (req, res) => {
         },{
             title: "Book2",
             author: "JJ2"
+        },{
+            title: "DOCKER WITH KUBERNETES",
+            author: "SHIVRAJ"
         }],
         success: true
     });
