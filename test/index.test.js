@@ -30,7 +30,7 @@ describe('/api', () => {
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.body.books.should.be.a('array');
-                    res.body.books.length.should.be.eql(3);
+                    res.body.books.length.should.be.eql(4);
                     res.body.books[0].should.have.property('title');
                     res.body.books[0].should.have.property('author');
                     res.body.should.have.property('success').eql(true);
